@@ -1,0 +1,173 @@
+const level1 = new Level(
+
+    [
+        new Chicken(620),
+        new Chicken(800),
+        new Chicken(1200),
+        new Chicken(1500),
+        new Chicken(1700),
+        new Chicken(2000),
+        new Chicken(2400),
+        new Chicken(2900),
+        new Chicken(3000),
+        new Chicken(3200),
+        new Chicken(4000),
+        new Chicken(4900),
+        new Chicken(5500),
+        new Chicken(7000),
+        new Chicken(7600),
+        new Chicken(8200),
+    ],
+    [
+        new Endboss(9900),
+    ],
+    [
+        new Cloud(600),
+        new Cloud(1500),
+        new Cloud(3000),
+        new Cloud(3500),
+        new Cloud(4200),
+        new Cloud(4500),
+        new Cloud(5000),
+        new Cloud(5300),
+        new Cloud(6500),
+        new Cloud(8000),
+        new Cloud(9000),
+        new Cloud(10200)
+    ],
+    [
+        new BackgroundObject('../img_pollo_locco/img/5_background/layers/air.png', 0),
+        new BackgroundObject('../img_pollo_locco/img/5_background/layers/3_third_layer/1.png', 0),
+        new BackgroundObject('../img_pollo_locco/img/5_background/layers/2_second_layer/1.png', 0),
+        new BackgroundObject('../img_pollo_locco/img/5_background/layers/1_first_layer/1.png', 0),
+
+    ],
+    [
+        new Coin(0, 700, 330),
+        new Coin(1, 750, 330),
+        new Coin(2, 800, 330),
+        new Coin(3, 850, 330),
+        new Coin(4, 900, 330),
+        new Coin(5, 2000, 250),
+        new Coin(6, 2050, 200),
+        new Coin(7, 2100, 141),
+        new Coin(8, 2150, 200),
+        new Coin(9, 2200, 250),
+        new Coin(0, 3800, 330),
+        new Coin(1, 3850, 330),
+        new Coin(2, 3900, 330),
+        new Coin(3, 3950, 330),
+        new Coin(4, 4000, 330),
+        new Coin(5, 5000, 250),
+        new Coin(6, 5050, 200),
+        new Coin(7, 5100, 141),
+        new Coin(8, 5150, 200),
+        new Coin(9, 5200, 250),
+        new Coin(5, 8800, 250),
+        new Coin(6, 8850, 200),
+        new Coin(7, 8900, 141),
+        new Coin(8, 8950, 200),
+        new Coin(9, 9000, 250)
+
+    ],
+    [
+        new Bottles(0, 650, 340),
+        new Bottles(1, 950, 340),
+        new Bottles(2, 1500, 340),
+        new Bottles(3, 1900, 340),
+        new Bottles(4, 4200, 340),
+        new Bottles(5, 5500, 340),
+        new Bottles(3, 6000, 340),
+        new Bottles(4, 8200, 340),
+        new Bottles(5, 8500, 340),
+        new Bottles(5, 9000, 340)
+    ]
+);
+
+function newLevel() {
+   return new Level(
+
+        [
+            new Chicken(620),
+            new Chicken(800),
+            new Chicken(1200),
+            new Chicken(1500),
+            new Chicken(1700),
+            new Chicken(2000),
+            new Chicken(2400),
+            new Chicken(2900),
+            new Chicken(3000),
+            new Chicken(3200),
+            new Chicken(4000),
+            new Chicken(4900),
+            new Chicken(5500),
+            new Chicken(7000),
+            new Chicken(7600),
+            new Chicken(8200),
+        ],
+        [
+            new Endboss(9900),
+        ],
+        [
+            new Cloud(600),
+            new Cloud(1500),
+            new Cloud(3000),
+            new Cloud(3500),
+            new Cloud(4200),
+            new Cloud(4500),
+            new Cloud(5000),
+            new Cloud(5300),
+            new Cloud(6500),
+            new Cloud(8000),
+            new Cloud(9000),
+            new Cloud(10200)
+        ],
+        [
+            new BackgroundObject('../img_pollo_locco/img/5_background/layers/air.png', 0),
+            new BackgroundObject('../img_pollo_locco/img/5_background/layers/3_third_layer/1.png', 0),
+            new BackgroundObject('../img_pollo_locco/img/5_background/layers/2_second_layer/1.png', 0),
+            new BackgroundObject('../img_pollo_locco/img/5_background/layers/1_first_layer/1.png', 0),
+    
+        ],
+        [
+            new Coin(0, 700, 330),
+            new Coin(1, 750, 330),
+            new Coin(2, 800, 330),
+            new Coin(3, 850, 330),
+            new Coin(4, 900, 330),
+            new Coin(5, 2000, 250),
+            new Coin(6, 2050, 200),
+            new Coin(7, 2100, 141),
+            new Coin(8, 2150, 200),
+            new Coin(9, 2200, 250),
+            new Coin(0, 3800, 330),
+            new Coin(1, 3850, 330),
+            new Coin(2, 3900, 330),
+            new Coin(3, 3950, 330),
+            new Coin(4, 4000, 330),
+            new Coin(5, 5000, 250),
+            new Coin(6, 5050, 200),
+            new Coin(7, 5100, 141),
+            new Coin(8, 5150, 200),
+            new Coin(9, 5200, 250),
+            new Coin(5, 8800, 250),
+            new Coin(6, 8850, 200),
+            new Coin(7, 8900, 141),
+            new Coin(8, 8950, 200),
+            new Coin(9, 9000, 250)
+    
+        ],
+        [
+            new Bottles(0, 650, 340),
+            new Bottles(1, 950, 340),
+            new Bottles(2, 1500, 340),
+            new Bottles(3, 1900, 340),
+            new Bottles(4, 4200, 340),
+            new Bottles(5, 5500, 340),
+            new Bottles(3, 6000, 340),
+            new Bottles(4, 8200, 340),
+            new Bottles(5, 8500, 340),
+            new Bottles(5, 9000, 340)
+        ]
+    );
+}

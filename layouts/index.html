@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png"
+        href="../img_pollo_locco/img/6_salsa_bottle/bottle_rotation/1_bottle_rotation.png">
+
+    <link rel="stylesheet" href="../styles/main.css">
+
+    <script src="../scripts/drawable-object.class.js"></script>
+    <script src="../scripts/status-bar.class.js"></script>
+    <script src="../scripts/move-object.class.js"></script>
+    <script src="../scripts/throwable-object.class.js"></script>
+    <script src="../scripts/startScreen.class.js"></script>
+    <script src="../scripts/character.class.js"></script>
+    <script src="../scripts/chicken.class.js"></script>
+    <script src="../scripts/endboss.class.js"></script>
+    <script src="../scripts/cloud.class.js"></script>
+    <script src="../scripts/coin.class.js"></script>
+    <script src="../scripts/bottles.class.js"></script>
+    <script src="../scripts/keyboard.class.js"></script>
+    <script src="../scripts/world.class.js"></script>
+    <script src="../scripts/background-object.class.js"></script>
+    <script src="../scripts/level.class.js"></script>
+    <script src="../scripts/levels/level1.js"></script>
+    <script src="../scripts/game.js"></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+</head>
+
+<body onload="init()">
+
+    <canvas id="canvas" width="720" height="480"></canvas>
+    <div class="buttonContainer">
+        <div class="buttonsTop">
+            <button class="button startButton" id="startButton" onclick="startGame()">Start Game</button>
+            <!-- Progressbar for Bossfight -->
+            <div class="progressBarContainer">
+                <h4>jefe de pollo</h4>
+                <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-danger"></div>
+                </div>
+            </div>
+            <!-- button for Instructions -->
+            <button class="button instructionsButton" id="instructionsButton"
+                onclick="showHideInstructions()">Instructions</button>
+        </div>
+        <!-- Buttons bottom -->
+        <div class="buttonsBottom">
+            <!-- mobile buttons move left - move right -->
+            <div class="mobileButtonsContainer">
+                <button class="mobileButton moveLeftButton">
+                    <img src="../icons/move_left.svg" alt="left">
+                </button>
+                <button class="mobileButton moveRightButton">
+                    <img src="../icons/move_rigth.svg" alt="right">
+                </button>
+            </div>
+            <!-- audio button -->
+            <button class="button audioButton"><img src="../icons/volume_up.svg" alt="" onclick="switchAudio()"
+                    class="audioImg"></button>
+
+                    <!-- mobile Buttons for Jump and Throw -->
+            <div class="mobileButtonsContainer">
+                <button class="mobileButton throwBottleButton"><img src="../icons/throw.svg" alt="throw"></button>
+                <button class="mobileButton jumpButton"><img src="../icons/jump.svg" alt="jump"></button>
+            </div>
+            <!-- fullscreen button -->
+            <button class="button fullscreenButton" id="fullscreenButton"><img src="../icons/fullscreen.svg" alt=""
+                    onclick="getFullscreen()"></button>
+        </div>
+    </div>
+
+    <div class="keyLayout">
+        <table>
+            <tr>
+                <th>MOVE</th>
+                <th>KEY</th>
+            </tr>
+            <tr>
+                <td>Right :</td>
+                <td class="tdMoveRight"><img src="../icons/arrow_right.svg" alt="Arrow-Right">Right Arrow</td>
+            </tr>
+            <tr>
+                <td>Left :</td>
+                <td class="tdMoveLeft"><img src="../icons/arrow_left.svg" alt="Arrow-Left">Left Arrow</td>
+            </tr>
+            <tr>
+                <td>Jump :</td>
+                <td class="tdJump"><img src="../icons/space_bar.svg" alt="Space">Space</td>
+            </tr>
+            <tr>
+                <td>Throw :</td>
+                <td class="tdThrowBottle"><img src="../icons/keyboard.svg" alt="Space">D</td>
+            </tr>
+        </table>
+    </div>
+    </canvas>
+
+
+    <div class="endScreen">
+        <h1 id="endScreenText">Game Over</h1>
+        <button class="button" id="againButton" onclick="tryAgain()">Try Again</button>
+    </div>
+
+
+</body>
+
+</html>

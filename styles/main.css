@@ -1,0 +1,263 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    margin: 0;
+    font-size: 100px;
+    color: #A10000;
+    text-shadow: 6px 6px 0px rgb(0, 0, 0);
+}
+
+h4 {
+    margin: 0;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+canvas {
+    background-color: black;
+    border: solid 2px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.keyLayout {
+    position: absolute;
+    display: none;
+}
+
+table {
+    font-size: 24px;
+}
+
+tr {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+th {
+    width: 250px;
+    height: 24px;
+    background-color: bisque;
+    border: 1px solid black;
+}
+
+td {
+    width: 250px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    background-color: lightgray;
+}
+
+.buttonContainer {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 720px;
+    height: 480px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.buttonsTop {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.button {
+    margin: 3%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: 900;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.startButton {
+    width: 16%;
+    height: 40px;
+}
+
+.instructionsButton {
+    width: 16%;
+    height: 40px;
+}
+
+.buttonsBottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fullscreenButton img {
+    width: 30px;
+    height: 30px;
+}
+
+.mobileMoveButtons{
+    display: flex;
+    gap: 32px;
+}
+
+.endScreen {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 100;
+    display: none;
+}
+
+.endScreen button {
+    width: 16em;
+    height: 4em;
+    margin: 0.5em;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    font-size: 0.8em;
+    font-weight: 900;
+}
+
+.endScreen button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.progressBarContainer {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: auto;
+    gap: 8px;
+    height: 100%;
+    color: #A10000;
+}
+
+.progress {
+    top: 10px;
+    width: 250px;
+    height: 10px;
+    z-index: 15;
+    border-radius: 20px;
+    background-color: lightgray;
+}
+
+.progress-bar {
+    background-color: #A10000;
+    height: 100%;
+    border-radius: 20px;
+    width: 0%;
+}
+
+.mobileButtonsContainer{
+    display: none;
+}
+
+@media(max-width: 720px) {
+    body {
+        background-color: black;
+    }
+
+    #canvas {
+        width: calc(100vh * 480 / 720);
+        height: 100vw;
+        transform: rotate(-90deg);
+        border: none;
+        border-radius: 0;
+    }
+
+    .buttonContainer {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+        width: 100vh;
+        height: 100vw;
+    }
+
+    .keyLayout {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+    }
+
+    .fullscreenButton{
+        display: none;
+    }
+
+    .endScreen {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+        width: 100vh;
+        height: 100vw;
+    }
+    
+
+    .audioButton{
+        background-color: transparent !important;
+        margin-top: 10px;
+    }
+
+    .button {
+        background-color: #81aef7;
+        margin: 10px;
+    }
+
+    .button:hover {
+        cursor: pointer;
+        background-color: #81aef7;
+        color: black;
+    }
+
+    .mobileButton{
+        width: 45px;
+        height: 45px;
+        border-radius: 40px;
+        border: none;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobileButtonsContainer{
+        display: flex;
+        gap: 32px;
+        margin: 0 20px 0 20px;
+    }
+
+    .mobileButtonsContainer img{
+        width: 32px;
+        height: 32px;
+    }
+
+}
