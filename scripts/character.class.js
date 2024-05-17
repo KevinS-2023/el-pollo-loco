@@ -1,11 +1,11 @@
 class Character extends MovableObject {
-        height = 200;
-        width = 95;
-        y = 220;
+        height = 300;
+        width = 115;
+        y =  80;
         speed = 10;
-        naturalHeight = 100;
-        naturalWidth = 50;
-        groundHeight = 220;
+        naturalWidth = 65;
+        naturalHeight = 160;
+        groundHeight = 120;
         deadAnimationPlayed = false;
         firstMove = false;
         previousY;
@@ -124,7 +124,12 @@ class Character extends MovableObject {
                         this.world.cameraX = -this.x + 100;
                 }
                 this.naturalX = this.x + 20;
-                this.naturalY = this.y + 90;
+                this.naturalY = this.y + 125;
+        }
+
+        setNewPosition(){
+                this.naturalX = this.x + 20;
+                this.naturalY = this.y + 125;
         }
 
         // right

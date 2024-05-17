@@ -30,13 +30,13 @@ class DrawableObject {
     }
 
     drawFrame(ctx) {
-        // if (this instanceof Character || this instanceof Chicken || this instanceof Endboss || this instanceof Coin || this instanceof Bottles || this instanceof ThrowableObject) {
-        //     ctx.beginPath();
-        //     ctx.lineWidth = '1';
-        //     ctx.strokeStyle = 'blue';
-        //     ctx.rect(this.naturalX, this.naturalY, this.naturalWidth, this.naturalHeight);
-        //     ctx.stroke();
-        // }
+        if (this instanceof Character || this instanceof Chicken || this instanceof Endboss || this instanceof Coin || this instanceof Bottles || this instanceof ThrowableObject) {
+            ctx.beginPath();
+            ctx.lineWidth = '1';
+            ctx.strokeStyle = 'blue';
+            ctx.rect(this.naturalX, this.naturalY, this.naturalWidth, this.naturalHeight);
+            ctx.stroke();
+        }
     }
 
     playAnimation(images) {

@@ -1,11 +1,14 @@
 class Endboss extends MovableObject {
-    y = 280;
-    height = 150;
-    width = 95;
-    naturalWidth = 80;
-    naturalHeight = 110;
+    // Size
+    y = 180;
+    height = 250
+    width = 125;
+    // HitBox
+    naturalWidth = 115;
+    naturalHeight = 210;
     naturalX = 50;
     naturalY = 80;
+    // Attributes
     speed = 10;
     move;
     dead = false;
@@ -65,6 +68,7 @@ class Endboss extends MovableObject {
         this.checkAnimation();
         this.energy = 100;
         this.applyGravity();
+        this.updateNaturalValues();
     }
 
     loadAllImages() {
